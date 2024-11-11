@@ -1,0 +1,19 @@
+2024-11
+
+11/11
+TILのリポジトリを作成。
+クラスを使用して、名前関数を作成すると、クラス外の関数との名前の被りがなくなる。
+
+class MathThings():
+    # 数値を受け取り、加算を実行
+    def add(x,y):
+        return x + y
+
+# 文字列を受け取り、連結を実行
+def add(s1, s2):
+    return s1 + s2
+
+# 名前空間のおかげで名前が衝突せずに済みます
+print(MathThings.add(5,4))
+print(add("hello", "world"))
+
