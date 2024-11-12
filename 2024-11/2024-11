@@ -17,3 +17,52 @@ def add(s1, s2):
 print(MathThings.add(5,4))
 print(add("hello", "world"))
 
+11/12
+git push -u origin main 
+-u オプションはこれ以降、git push コマンドを実行する際に、ブランチ名を省略できる。
+
+述語とは、真偽どちらかの答えを返す関数または式のこと。ある条件が真か偽かを判定することができる。
+
+# 国を文字列として受け取り、言語を返す関数
+def languageSetting(country):
+    # 述語 country == "Japan" が true の場合、以下の処理が実行されます
+    if country == "Japan": 
+        return "ja"
+ 
+print(languageSetting("Japan"))
+
+if文の省略
+関数の戻り値がブーリアン型であれば、if文を省略して、単に述語の結果を返すことができる。
+if文は条件としてブール値を期待するので、if文を使わず、単純に述語の結果を直接返すことができる。
+
+論理演算子
+『かつ』を表す　論理積（＆＆）演算子
+
+true && true
+// true
+
+true && false
+// false
+
+false && true
+// false
+
+false && false
+// false
+
+『または』を表す　論理和（||）演算子
+true || true
+// true
+
+true || false
+// true
+
+false || true
+// true
+
+false || false
+// false
+
+等価演算子 != 
+
+
