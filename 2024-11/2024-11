@@ -65,4 +65,17 @@ false || false
 
 等価演算子 != 
 
+11/13
+if文の文法
+def isLeapYear(year):
+    # 関数を完成させてください
+    if year % 400 == 0 :
+        return True
+    elif year % 100 == 0  :
+        return False
+    elif year % 4  == 0 :
+        return True
+
+    ＃elif のあとは:不要
+
 
