@@ -89,6 +89,73 @@ and not
 ライブラリの公式ドキュメントには、これらの情報が記載されている。
 
 
+スライス構文
+"I will go hiking near a ranch in Oregon."
+ 0123456789
+ ”は含まない
+•sentence[start:end] の形式で、start から end - 1 までの部分を取得する。
+• end の位置は含まれない点が重要。
+
+s[:i]は文字列sの先頭からi番目までの部分を取得する。（iは含まない）
+s[i:]は文字列sのi番目以降の部分を取得する。
+[-x:] で後ろから x 番目の文字から最後までを切り出すことができる。
+
+
+11/16
+import math //mathライブラリを使用できる。
+
+import math
+
+def vacationRental(people,day):
+    # 関数を完成させてください
+    if day >=10:
+        perDay = 50
+    elif day >= 4:
+        perDay = 60
+    else: 
+        perDay = 80
+
+    seisoukomi = people * day * perDay * 1.12
+
+    totalPrice = seisoukomi *1.08
+
+    return math.floor(totalPrice)
+
+※初歩的だが、関数内の式のインデントは関数内部に記述すること
+　defと同じインデントに記述すると、関数外とみなされる。
+
+## Math ライブラリ
+# 累乗を計算することができる pow 関数
+# 3^4 を計算 (3 * 3 * 3 * 3)
+print(math.pow(3,4))
+ 
+# 2^5 を計算 (2 * 2 * 2 * 2 * 2)
+print(math.pow(2,5))
+ 
+# √2 を計算
+print(math.sqrt(2))
+
+数字が有理数か判断する方法
+    if math.sqrt(number) % 1 == 0 :
+        return True
+    else:
+        return False
+
+数値を1で割った余りが存在しなければTrue
+== をよく忘れる。
+
+uppear //すべての文字を大文字に
+lower //すべての文字を小文字に
+find関数　inputが存在しない場合は-1を返す。
+
+return not という表現
+not演算子は論理否定を行う。
+TrueをFalseに変換
+FalseをTrueに変換
+
+# replace 関数
+# sentence の Oregon と California を入れ替えます
+print(sentence.replace("Oregon", "California"))
 
 
 
