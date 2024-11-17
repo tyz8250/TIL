@@ -157,6 +157,70 @@ FalseをTrueに変換
 # sentence の Oregon と California を入れ替えます
 print(sentence.replace("Oregon", "California"))
 
+11/17
+recursion CS初級を終了
+recursion　有料会員になった。
+
+抽象化（abstraction）→プログラムをわかりやすくする
+プログラムのなかで詳細を隠し、必要な情報だけを強調する考え方。
+
+補助関数で出力した値を変数に入れないと、関数のreturn値として返すことができない。
+def calculateLocation(latitude,longitude):
+    def getLatitudeDirection(latitude):
+        if latitude == 0:
+            return "equator"
+        elif latitude > 0:
+            return "north"
+        else:
+            return "south"
+    
+    def getLongitudeDirection(longitude):
+        if longitude == 0:
+            return "prime meridian"
+        elif longitude > 0:
+            return "east"
+        else:
+            return "west"
+
+    //以下2行のコードは記述しなくても良いと思っていた。
+    latitudeDirection = getLatitudeDirection(latitude)　
+    longitudeDirection = getLongitudeDirection(longitude)
+
+    return latitudeDirection + "/" + longitudeDirection 
+    # 関数を完成させてください
+
+
+ドメインの切り取り（練習問題）
+
+改善前（コードは動く）
+def upperCaseDomain(email):
+    # 関数を完成させてください
+    location = email.find("@") + 1
+    return email[location:len(email)].upper()
+
+
+1.len(email) の使用: email[location:len(email)] の部分は email[location:] 
+  と書くことで、より簡潔に表現できます。len(email) を明示的に書く必要はありません。
+
+2.変数名の改善: location という変数名は、何の位置を示しているのかが少し曖昧です。at_index
+  など、もう少し具体的な名前にすると、コードの可読性がさらに向上します。
+
+
+改善後
+def upperCaseDomain(email):
+    # "@" の位置を見つける
+    at_index = email.find("@") + 1
+    # ドメイン部分を大文字に変換して返す
+    return email[at_index:].upper()
+
+
+
+
+
+
+
+
+
 
 
 
