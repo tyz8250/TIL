@@ -213,11 +213,32 @@ def upperCaseDomain(email):
     # ドメイン部分を大文字に変換して返す
     return email[at_index:].upper()
 
+平方根復習
+import math
+def distance(x,y):
+    return math.sqrt(x **2 + y**2)
 
+関数合成の注意点
+・関数1つにつき、1つのタスク
+・Don't Repeat Yourself (DRY)
+    ・関数は繰り返し使用されることを意図しているので、何回も再利用ができる。
+    ・同じコードを何回も書く必要がない。
 
+11/18
+関数の分解（functiom decomposition）
+1つの大きなタスクをいくつかの小さなタスクに分けて、それぞれ独立した関数として定義すること。
+・再利用性の向上
+・可読性の向上
+・デバックの容易性　というメリットがある。
 
+数値の切り上げ
+import math
 
+# 数値を切り上げる例
+number = 4.2
+result = math.ceil(number)
 
+print(result)  # 出力: 5
 
 
 
