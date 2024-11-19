@@ -240,6 +240,20 @@ result = math.ceil(number)
 
 print(result)  # 出力: 5
 
+11/19
+def processPayment(creditCardType, cost):
+    # 合計金額を計算
+    total = totalCost(creditCardType, cost)
+
+    # 合計金額が300ドルを超える場合は-1.0を返す
+    if total > 300:
+        return -1.0
+    else:
+        return total
+変数totalにtotalCost(creditCardType, cost)を代入することで可読性が向上する。
+
+
+
 
 
 
