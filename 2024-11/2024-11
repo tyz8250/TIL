@@ -252,10 +252,28 @@ def processPayment(creditCardType, cost):
         return total
 変数totalにtotalCost(creditCardType, cost)を代入することで可読性が向上する。
 
+11/21
+タワーオブテラー　クリア
+再帰について学習
+def infectedPeople(day):
+    # 関数を完成させてください
+    if day <= 0:
+        return 1
+    return infectedPeople(day -1) * 2
 
+スタックオーバーフローとは、プログラムが実行中にスタック領域を超えてデータを格納しようとしたときに発生するエラーのことです。
 
+def recursive_function():
+    # 関数が終了条件なしで自分自身を呼び出し続ける
+    return recursive_function()
 
+# 関数を呼び出す
+recursive_function()
 
+このコードは、recursive_function が終了条件なしで無限に自分自身を呼び出し続けるため、スタックオーバーフローを引き起こします。
 
+ベースケース(basecase):再帰関数において、関数に戻り値を保証し、ループを終了させるステートメント
+
+コンピュータは一度無限ループに入ると、プログラムは無限ループから抜け出すことができない。
 
 
