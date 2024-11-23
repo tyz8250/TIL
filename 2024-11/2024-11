@@ -276,4 +276,63 @@ recursive_function()
 
 コンピュータは一度無限ループに入ると、プログラムは無限ループから抜け出すことができない。
 
+11/22
+再帰は、関数が自分自身を呼び出すプログラム
+
+11/23
+Python では再帰の深さに制限があるため、非常に大きな n に対しては注意が必要
+
+#入力が自然数であることの確認（負の整数や非整数を除く）
+if not isinstance(n, int) or n < 0:
+    raise ValueError("入力は0以上の整数でなければなりません。")
+
+
+def squareSummation(n):
+    # ベースケース: n が 0 の場合、平方和は 0
+    if n == 0:
+        return 0
+    # 再帰ステップ: n の平方を加算し、n-1 に対して再帰的に計算
+    return squareSummation(n-1) + n**2
+
+
+文字の結合
+def mergeString(s1, s2):
+    # helper関数を定義
+    def helper(index):
+        # 終了条件：インデックスが文字列の長さに達したら空文字を返す
+        if index >= len(s1):
+            return ""
+        
+        # 現在のインデックスの文字列を交互に結合し、次のインデックスを処理
+        return s1[index] + s2[index] + helper(index + 1)
+    
+    # 初期インデックス0でhelperを呼び出す
+    return helper(0)
+
+# テスト例
+print(mergeString("abc", "xyz"))   # 出力: "axbycz"
+print(mergeString("123", "456"))   # 出力: "142536"
+
+if index + 1 >= len(s):  # 奇数文字で最後の1文字を処理
+            return s[index]
+
+def commonPrefix(s1, s2):
+    # helper関数を定義
+    def helper(index):
+        # インデックスが文字列の長さを超えた場合、または文字が異なる場合、処理を終了する
+        if index >= len(s1) or index >= len(s2) or s1[index] != s2[index]:
+            return s1[:index]
+        # 次のインデックスでhelperを再帰的に呼び出す
+        return helper(index + 1)
+
+    # 初期インデックス0でhelperを呼び出す
+    return helper(0)
+
+# 使用例
+print(commonPrefix("flower", "flow"))  # 出力: "flow"
+print(commonPrefix("dog", "racecar"))  # 出力: ""
+
+・obsidianでコードコメント比較のメモ作成
+
+
 
