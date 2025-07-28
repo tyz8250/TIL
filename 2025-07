@@ -22,3 +22,4 @@ MySQLをインストール
 
 7/29
 alterを用いたテーブルの更新
+テーブルの削除(DROP/TRUNCATE)
