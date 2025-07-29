@@ -34,3 +34,5 @@ FROM..入力になるテーブルを指定することができる。例えば�
 
 全カラムを出力する場合は、カラムを指定する代わりに * を使用する。
 SELECT products.* FROM products;
+
+recursion 問題3つクリア
