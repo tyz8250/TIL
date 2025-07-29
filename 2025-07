@@ -23,3 +23,14 @@ MySQLをインストール
 7/29
 alterを用いたテーブルの更新
 テーブルの削除(DROP/TRUNCATE)
+
+7/30
+データの指定(SELECT/FROM)
+SELECT..出力はデータ形式( 1|2 )
+FROM..入力になるテーブルを指定することができる。例えば、「FROM で指定した入力テーブルに存在するカラムの内、表示したいカラムを SELECT で指定する」といった使い方。
+
+出力するカラムを指定する時は、''' table_name.column_name '''
+例)SELECT products.id, products.name FROM products;
+
+全カラムを出力する場合は、カラムを指定する代わりに * を使用する。
+SELECT products.* FROM products;
