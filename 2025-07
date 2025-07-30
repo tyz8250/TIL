@@ -36,3 +36,18 @@ FROM..入力になるテーブルを指定することができる。例えば�
 SELECT products.* FROM products;
 
 recursion 問題3つクリア
+
+7/31
+WHERE..入力テーブルから条件に合うレコードのみ抽出
+例えば、products テーブルの id カラムが 1 のレコードを出力したい場合は、SELECT products.* FROM products WHERE products.id = 1; のように記述
+
+この時の内部での処理は、以下。
+
+一行目のレコードを見て、WHERE 句を評価。つまり、products.id = 1 を評価。
+WHERE 句の評価が true であればその行は出力され、false であればその行は出力されない。
+一行目のレコードの評価が完了したので、二行目のレコードへと移る。
+上記を繰り返す。
+
+テーブル名を省略することができる。
+SELECT * FROM products WHERE id = 1;
+※1つのクエリで複数の入力テーブルを操作する場合はテーブル名の明示が必要。
