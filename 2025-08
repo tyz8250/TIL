@@ -6,3 +6,6 @@ order句
 limit句
 ofsetの使用方法
 recursion 問題3問
+8/4
+max min sum count avg
+select prefecture as 都道府県,avg(age) as 平均年齢 from users where prefecture ='大阪府';
