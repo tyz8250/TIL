@@ -9,3 +9,18 @@ recursion 問題3問
 8/4
 max min sum count avg
 select prefecture as 都道府県,avg(age) as 平均年齢 from users where prefecture ='大阪府';
+8/5
+GROUP BY
+SELECT prefecture AS 都道府県, AVG(age) AS 平均年齢 FROM users WHERE prefecture IN ('大阪府', '東京都') GROUP BY prefecture;
+
+1. WHERE 句で、大阪府、東京都のレコードだけに絞り込む。
+2. 残ったレコードを、都道府県ごとにグループ化する。
+3. 各グループで、年齢の平均値を取得する。
+4. SELECT 句で各グループのレコードをまとめて表示する。
+
+HAVING..仮想テーブルに対して、絞り込みを実行できる。
+SELECT prefecture AS 都道府県, AVG(age) AS 平均年齢 FROM users WHERE prefecture IN ('大阪府', '東京都') GROUP BY prefecture HAVING AVG(age) <= 20;
+
+平均値で少数点以下を切り捨てたい場合は以下
+ROUND(AVG(age), 0)　<--Excelと似ている。
+
