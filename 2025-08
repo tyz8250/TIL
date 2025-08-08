@@ -24,3 +24,8 @@ SELECT prefecture AS 都道府県, AVG(age) AS 平均年齢 FROM users WHERE pre
 平均値で少数点以下を切り捨てたい場合は以下
 ROUND(AVG(age), 0)　<--Excelと似ている。
 
+8/8 
+個人アプリ再開
+React-router
+ npx create-react-router@latest　ファイル名
+
