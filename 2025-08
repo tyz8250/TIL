@@ -28,4 +28,5 @@ ROUND(AVG(age), 0)　<--Excelと似ている。
 個人アプリ再開
 React-router
  npx create-react-router@latest　ファイル名
-
+8/12
+付箋アプリ作成中
