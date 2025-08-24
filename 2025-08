@@ -30,3 +30,6 @@ React-router
  npx create-react-router@latest　ファイル名
 8/12
 付箋アプリ作成中
+8/24
+nvm alias defalut xx
+nodeのデフォルトバージョンを設定できる。
