@@ -4,19 +4,24 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"os"
 )
+
+type logWriter struct{}
 
 func main() {
 	resp, err := http.Get("http://google.com")
 	if err != nil{
-		fmt.Println("Error:", err)
-		os.Exit(1)
+		// エラーハンドリング
+		fmt.Println("エラー:", err)
+		return
 	}
-	// コードとして長い。
-	// bs := make([]byte, 99999) // create a byte slice(99999 は推定値であり、実際のデータサイズに応じて調整が必要)
-	// resp.Body.Read(bs)
-	// fmt.Println(string(bs))
+	lw := logWriter{}
 
-	io.Copy(os.Stdout, resp.Body)
+	io.Copy(lw,resp.Body)
+}
+
+func (logWriter) Write(bs []byte) (int,error) {
+	fmt.Println(string(bs))
+	fmt.Println("書き込んだバイト数",len(bs))
+	return len(bs),nil
 }
