@@ -6,8 +6,8 @@ func main() {
 		"http://facebook.com",
 		"http://stackoverflow.com",
 		"https://golang.org",
-		"http://amazon.com"
+		"http://amazon.com",
 	}
-	for _, link := range links{
+	for _, link := range link{
 	} 
 }
