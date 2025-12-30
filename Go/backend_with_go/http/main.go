@@ -6,6 +6,8 @@ import (
 	"net/http"
 )
 
+// 8080番ポートでTCPサーバーを立てて、HTTPリクエストが来たら / に対して handler を呼ぶ
+
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		log.Printf("method=%s, remote=%s", r.Method, r.RemoteAddr)
