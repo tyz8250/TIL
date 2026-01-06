@@ -2,9 +2,16 @@ package main
 
 import "fmt"
 
-var i, j int = 1, 2
+type Vertex struct {
+	Lat, Long float64
+}
+
+var m map[string]Vertex
 
 func main() {
-	var c, python, java = true, false, "no!"
-	fmt.Println(i, j, c, python, java)
+	m = make(map[string]Vertex)
+	m["Bell Labs"] = Vertex{
+		40.76, -74.0,
+	}
+	fmt.Println(m["Bell Labs"])
 }
